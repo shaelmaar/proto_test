@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package shops;
+
+option go_package = "/shop";
+
+service Deactivate {
+  rpc Deactivate(Request) returns (Response) {}
+}
+
+message Request {
+  string xmlid = 1;
+}
+
+message Response {
+  bool success = 1;
+}
