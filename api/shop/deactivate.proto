@@ -5,13 +5,15 @@ package shops;
 option go_package = "/shop";
 
 service Deactivate {
-  rpc Deactivate(Request) returns (Response) {}
+  rpc Deactivate(DeactivateRequest) returns (DeactivateResponse) {}
 }
 
-message Request {
+message DeactivateRequest {
   string xmlid = 1;
 }
 
-message Response {
+message DeactivateResponse {
   bool success = 1;
 }
+
+//  protoc --go_out=api --go_opt=paths=import --go-grpc_out=api --go-grpc_opt=paths=import api/shop/deactivate.proto

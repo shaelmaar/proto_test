@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type DeactivateClient interface {
-	Deactivate(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	Deactivate(ctx context.Context, in *DeactivateRequest, opts ...grpc.CallOption) (*DeactivateResponse, error)
 }
 
 type deactivateClient struct {
@@ -33,8 +33,8 @@ func NewDeactivateClient(cc grpc.ClientConnInterface) DeactivateClient {
 	return &deactivateClient{cc}
 }
 
-func (c *deactivateClient) Deactivate(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
-	out := new(Response)
+func (c *deactivateClient) Deactivate(ctx context.Context, in *DeactivateRequest, opts ...grpc.CallOption) (*DeactivateResponse, error) {
+	out := new(DeactivateResponse)
 	err := c.cc.Invoke(ctx, "/shops.Deactivate/Deactivate", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -46,7 +46,7 @@ func (c *deactivateClient) Deactivate(ctx context.Context, in *Request, opts ...
 // All implementations must embed UnimplementedDeactivateServer
 // for forward compatibility
 type DeactivateServer interface {
-	Deactivate(context.Context, *Request) (*Response, error)
+	Deactivate(context.Context, *DeactivateRequest) (*DeactivateResponse, error)
 	mustEmbedUnimplementedDeactivateServer()
 }
 
@@ -54,7 +54,7 @@ type DeactivateServer interface {
 type UnimplementedDeactivateServer struct {
 }
 
-func (UnimplementedDeactivateServer) Deactivate(context.Context, *Request) (*Response, error) {
+func (UnimplementedDeactivateServer) Deactivate(context.Context, *DeactivateRequest) (*DeactivateResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Deactivate not implemented")
 }
 func (UnimplementedDeactivateServer) mustEmbedUnimplementedDeactivateServer() {}
@@ -71,7 +71,7 @@ func RegisterDeactivateServer(s grpc.ServiceRegistrar, srv DeactivateServer) {
 }
 
 func _Deactivate_Deactivate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(Request)
+	in := new(DeactivateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -83,7 +83,7 @@ func _Deactivate_Deactivate_Handler(srv interface{}, ctx context.Context, dec fu
 		FullMethod: "/shops.Deactivate/Deactivate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DeactivateServer).Deactivate(ctx, req.(*Request))
+		return srv.(DeactivateServer).Deactivate(ctx, req.(*DeactivateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

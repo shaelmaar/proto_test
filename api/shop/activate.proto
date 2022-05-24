@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package shops;
+
+option go_package = "/shop";
+
+service Activate {
+  rpc Activate(ActivateRequest) returns (ActivateResponse) {}
+}
+
+message ActivateRequest {
+  string xmlid = 1;
+}
+
+message ActivateResponse {
+  bool success = 1;
+}
+
+//  protoc --go_out=api --go_opt=paths=import --go-grpc_out=api --go-grpc_opt=paths=import api/shop/activate.proto
