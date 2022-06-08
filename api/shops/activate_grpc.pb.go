@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.6.1
-// source: api/shop/activate.proto
+// source: proto/shops/activate.proto
 
-package shop
+package shops
 
 import (
 	context "context"
@@ -101,5 +101,5 @@ var Activate_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "api/shop/activate.proto",
+	Metadata: "proto/shops/activate.proto",
 }

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package shops;
 
-option go_package = "/shop";
+option go_package = "/api/shops";
 
 service Deactivate {
   rpc Deactivate(DeactivateRequest) returns (DeactivateResponse) {}
@@ -16,4 +16,4 @@ message DeactivateResponse {
   bool success = 1;
 }
 
-//  protoc --go_out=api --go_opt=paths=import --go-grpc_out=api --go-grpc_opt=paths=import api/shop/deactivate.proto
+// protoc --go_out=. --go_opt=paths=import --go-grpc_out=. --go-grpc_opt=paths=import proto/shops/deactivate.proto

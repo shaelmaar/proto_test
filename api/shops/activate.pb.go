@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.28.0
 // 	protoc        v3.6.1
-// source: api/shop/activate.proto
+// source: proto/shops/activate.proto
 
-package shop
+package shops
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ type ActivateRequest struct {
 func (x *ActivateRequest) Reset() {
 	*x = ActivateRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_shop_activate_proto_msgTypes[0]
+		mi := &file_proto_shops_activate_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *ActivateRequest) String() string {
 func (*ActivateRequest) ProtoMessage() {}
 
 func (x *ActivateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_api_shop_activate_proto_msgTypes[0]
+	mi := &file_proto_shops_activate_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *ActivateRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ActivateRequest.ProtoReflect.Descriptor instead.
 func (*ActivateRequest) Descriptor() ([]byte, []int) {
-	return file_api_shop_activate_proto_rawDescGZIP(), []int{0}
+	return file_proto_shops_activate_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ActivateRequest) GetXmlid() string {
@@ -78,7 +78,7 @@ type ActivateResponse struct {
 func (x *ActivateResponse) Reset() {
 	*x = ActivateResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_api_shop_activate_proto_msgTypes[1]
+		mi := &file_proto_shops_activate_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -91,7 +91,7 @@ func (x *ActivateResponse) String() string {
 func (*ActivateResponse) ProtoMessage() {}
 
 func (x *ActivateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_api_shop_activate_proto_msgTypes[1]
+	mi := &file_proto_shops_activate_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -104,7 +104,7 @@ func (x *ActivateResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ActivateResponse.ProtoReflect.Descriptor instead.
 func (*ActivateResponse) Descriptor() ([]byte, []int) {
-	return file_api_shop_activate_proto_rawDescGZIP(), []int{1}
+	return file_proto_shops_activate_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ActivateResponse) GetSuccess() bool {
@@ -114,43 +114,43 @@ func (x *ActivateResponse) GetSuccess() bool {
 	return false
 }
 
-var File_api_shop_activate_proto protoreflect.FileDescriptor
+var File_proto_shops_activate_proto protoreflect.FileDescriptor
 
-var file_api_shop_activate_proto_rawDesc = []byte{
-	0x0a, 0x17, 0x61, 0x70, 0x69, 0x2f, 0x73, 0x68, 0x6f, 0x70, 0x2f, 0x61, 0x63, 0x74, 0x69, 0x76,
-	0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x73, 0x68, 0x6f, 0x70, 0x73,
-	0x22, 0x27, 0x0a, 0x0f, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x78, 0x6d, 0x6c, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x05, 0x78, 0x6d, 0x6c, 0x69, 0x64, 0x22, 0x2c, 0x0a, 0x10, 0x41, 0x63, 0x74,
-	0x69, 0x76, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x18, 0x0a,
-	0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07,
-	0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x32, 0x49, 0x0a, 0x08, 0x41, 0x63, 0x74, 0x69, 0x76,
-	0x61, 0x74, 0x65, 0x12, 0x3d, 0x0a, 0x08, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x12,
-	0x16, 0x2e, 0x73, 0x68, 0x6f, 0x70, 0x73, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x73, 0x68, 0x6f, 0x70, 0x73, 0x2e,
+var file_proto_shops_activate_proto_rawDesc = []byte{
+	0x0a, 0x1a, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x73, 0x68, 0x6f, 0x70, 0x73, 0x2f, 0x61, 0x63,
+	0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x73, 0x68,
+	0x6f, 0x70, 0x73, 0x22, 0x27, 0x0a, 0x0f, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x78, 0x6d, 0x6c, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x78, 0x6d, 0x6c, 0x69, 0x64, 0x22, 0x2c, 0x0a, 0x10,
 	0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x2f, 0x73, 0x68, 0x6f, 0x70, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x32, 0x49, 0x0a, 0x08, 0x41, 0x63,
+	0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x12, 0x3d, 0x0a, 0x08, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61,
+	0x74, 0x65, 0x12, 0x16, 0x2e, 0x73, 0x68, 0x6f, 0x70, 0x73, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76,
+	0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x73, 0x68, 0x6f,
+	0x70, 0x73, 0x2e, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x0c, 0x5a, 0x0a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x73, 0x68,
+	0x6f, 0x70, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_api_shop_activate_proto_rawDescOnce sync.Once
-	file_api_shop_activate_proto_rawDescData = file_api_shop_activate_proto_rawDesc
+	file_proto_shops_activate_proto_rawDescOnce sync.Once
+	file_proto_shops_activate_proto_rawDescData = file_proto_shops_activate_proto_rawDesc
 )
 
-func file_api_shop_activate_proto_rawDescGZIP() []byte {
-	file_api_shop_activate_proto_rawDescOnce.Do(func() {
-		file_api_shop_activate_proto_rawDescData = protoimpl.X.CompressGZIP(file_api_shop_activate_proto_rawDescData)
+func file_proto_shops_activate_proto_rawDescGZIP() []byte {
+	file_proto_shops_activate_proto_rawDescOnce.Do(func() {
+		file_proto_shops_activate_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_shops_activate_proto_rawDescData)
 	})
-	return file_api_shop_activate_proto_rawDescData
+	return file_proto_shops_activate_proto_rawDescData
 }
 
-var file_api_shop_activate_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_api_shop_activate_proto_goTypes = []interface{}{
+var file_proto_shops_activate_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_proto_shops_activate_proto_goTypes = []interface{}{
 	(*ActivateRequest)(nil),  // 0: shops.ActivateRequest
 	(*ActivateResponse)(nil), // 1: shops.ActivateResponse
 }
-var file_api_shop_activate_proto_depIdxs = []int32{
+var file_proto_shops_activate_proto_depIdxs = []int32{
 	0, // 0: shops.Activate.Activate:input_type -> shops.ActivateRequest
 	1, // 1: shops.Activate.Activate:output_type -> shops.ActivateResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -160,13 +160,13 @@ var file_api_shop_activate_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_api_shop_activate_proto_init() }
-func file_api_shop_activate_proto_init() {
-	if File_api_shop_activate_proto != nil {
+func init() { file_proto_shops_activate_proto_init() }
+func file_proto_shops_activate_proto_init() {
+	if File_proto_shops_activate_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_api_shop_activate_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_shops_activate_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ActivateRequest); i {
 			case 0:
 				return &v.state
@@ -178,7 +178,7 @@ func file_api_shop_activate_proto_init() {
 				return nil
 			}
 		}
-		file_api_shop_activate_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_shops_activate_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ActivateResponse); i {
 			case 0:
 				return &v.state
@@ -195,18 +195,18 @@ func file_api_shop_activate_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_api_shop_activate_proto_rawDesc,
+			RawDescriptor: file_proto_shops_activate_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_api_shop_activate_proto_goTypes,
-		DependencyIndexes: file_api_shop_activate_proto_depIdxs,
-		MessageInfos:      file_api_shop_activate_proto_msgTypes,
+		GoTypes:           file_proto_shops_activate_proto_goTypes,
+		DependencyIndexes: file_proto_shops_activate_proto_depIdxs,
+		MessageInfos:      file_proto_shops_activate_proto_msgTypes,
 	}.Build()
-	File_api_shop_activate_proto = out.File
-	file_api_shop_activate_proto_rawDesc = nil
-	file_api_shop_activate_proto_goTypes = nil
-	file_api_shop_activate_proto_depIdxs = nil
+	File_proto_shops_activate_proto = out.File
+	file_proto_shops_activate_proto_rawDesc = nil
+	file_proto_shops_activate_proto_goTypes = nil
+	file_proto_shops_activate_proto_depIdxs = nil
 }
