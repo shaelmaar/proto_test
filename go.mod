@@ -1,4 +1,4 @@
-module github.com/shaelmaar/proto_test/api
+module github.com/shaelmaar/proto_test
 
 go 1.17
 
